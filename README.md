@@ -18,15 +18,15 @@ O resultado é uma tradução de alta precisão, ideal para:
 ✔ Engenharia • ✔ Tecnologia • ✔ Medicina • ✔ Documentação Técnica
 ✔ Pesquisa Científica • ✔ Conteúdo Multidisciplinar
 
-🏗️ Arquitetura da Solução
-┌───────────────┐         ┌─────────────────────────┐         ┌─────────────────────────┐
-│  Artigo Técnico│  --->   │   Azure Translator       │  --->   │ Azure OpenAI (GPT-4o)    │
-└───────────────┘          │   • Tradução inicial     │          │ • Pós-edição            │
-                           │   • Glossário aplicado   │          │ • Terminologia precisa  │
-                           └─────────────────────────┘         └─────────────────────────┘
-                                                                          │
-                                                                          ▼
-                                                             Tradução Técnica Final
+Arquitetura da Solução:
+
+         ┌─────────────────────────┐         ┌─────────────────────────┐
+Artigo Técnico  --->   Azure Translator  --->  Azure OpenAI (GPT-4o)
+                       • Tradução inicial     • Pós-edição 
+                       • Glossário aplicado   • Terminologia precisa 
+                       
+                                                        ▼
+                                              Tradução Técnica Final
 
 
 🚀 Funcionalidades Principais
@@ -47,6 +47,7 @@ Uniformização de vocabulário
 🔹 Suporte a Glossários Customizados
 
 Inclua seu próprio dicionário técnico no formato Python:
+
 ```
 glossario = {
     "modelagem computacional": "computational modeling",
@@ -56,13 +57,16 @@ glossario = {
 ```
 📦 Instalação
 1. Clone o repositório
+   
+```
 git clone https://github.com/LPMLarica/AzureAITranslator.git
 cd AzureAITranslator
+```
 
-2. Instale as dependências
+3. Instale as dependências
 pip install -r requirements.txt
 
-3. Configure as variáveis de ambiente
+4. Configure as variáveis de ambiente
 
 Crie um arquivo .env:
 ```
