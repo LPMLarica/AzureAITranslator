@@ -28,6 +28,7 @@ O resultado é uma tradução de alta precisão, ideal para:
                                                                           ▼
                                                              Tradução Técnica Final
 
+
 🚀 Funcionalidades Principais
 🔹 Tradução Neural com Azure Translator
 
@@ -46,13 +47,13 @@ Uniformização de vocabulário
 🔹 Suporte a Glossários Customizados
 
 Inclua seu próprio dicionário técnico no formato Python:
-
+```
 glossario = {
     "modelagem computacional": "computational modeling",
     "método de elementos finitos": "finite element method",
     "tensão": "stress"
 }
-
+```
 📦 Instalação
 1. Clone o repositório
 git clone https://github.com/LPMLarica/AzureAITranslator.git
@@ -64,19 +65,20 @@ pip install -r requirements.txt
 3. Configure as variáveis de ambiente
 
 Crie um arquivo .env:
-
+```
 AZURE_TRANSLATOR_ENDPOINT=https://<sua-instancia>.cognitiveservices.azure.com/
 AZURE_TRANSLATOR_KEY=<sua-chave>
 
 AZURE_OPENAI_ENDPOINT=https://<sua-instancia>.openai.azure.com/
 AZURE_OPENAI_KEY=<sua-chave>
 AZURE_OPENAI_DEPLOYMENT=gpt-4o
-
+```
 🧪 Como Usar
 🔹 Execução simples
 python main.py
 
 🔹 No seu código Python
+```
 from translator_pipeline import translate_with_azure, refine_with_azure_openai
 
 texto = "A modelagem computacional é essencial para simulações avançadas."
@@ -90,7 +92,7 @@ traducao_base = translate_with_azure(texto, to_lang="en", glossary=glossario)
 traducao_final = refine_with_azure_openai(traducao_base, glossary=glossario)
 
 print(traducao_final)
-
+```
 📁 Estrutura do Projeto
 📦 azure-technical-translation
 ├── main.py
@@ -99,18 +101,18 @@ print(traducao_final)
 ├── requirements.txt
 └── .env.example
 
-🎨 Demonstração do Fluxo (GIF opcional)
+Tecnologias Utilizadas:
 
-(Adicione um GIF futuramente mostrando o fluxo no terminal ou UI)
+| Tecnologia               | Uso                              |
+| ------------------------ | -------------------------------- |
+| **Azure Translator**     | Tradução neural com glossário    |
+| **Azure OpenAI GPT-4o**  | Pós-edição e refinamento técnico |
+| **Python**               | Backend                          |
+| **dotenv**               | Configuração segura              |
+| **Azure SDK for Python** | Integração com serviços          |
 
-🛠️ Tecnologias Utilizadas
-Tecnologia	Uso
-Azure Translator	Tradução neural com glossário
-Azure OpenAI GPT-4o	Pós-edição e refinamento técnico
-Python	Backend
-dotenv	Configuração segura
-Azure SDK for Python	Integração com serviços
-📘 Roadmap
+
+Roadmap
 
  Tradução + refinamento técnico
 
@@ -129,10 +131,6 @@ Azure SDK for Python	Integração com serviços
 Contribuições são bem-vindas!
 Sinta-se à vontade para abrir Issues e Pull Requests.
 
-📄 Licença
-
 Distribuído sob a licença MIT.
-
-⭐ Gostou do projeto?
 
 Se este repositório te ajudou, deixe uma estrela ⭐ para apoiar!
