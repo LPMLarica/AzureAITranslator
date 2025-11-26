@@ -1,0 +1,4 @@
+azure-ai-translation-text
+azure-identity
+openai
+python-dotenv
