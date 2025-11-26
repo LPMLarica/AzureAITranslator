@@ -21,12 +21,13 @@ O resultado é uma tradução de alta precisão, ideal para:
 Arquitetura da Solução:
 
          ┌─────────────────────────┐         ┌─────────────────────────┐
-Artigo Técnico  --->   Azure Translator  --->  Azure OpenAI (GPT-4o)
-                       • Tradução inicial     • Pós-edição 
-                       • Glossário aplicado   • Terminologia precisa 
+         
+         Artigo Técnico  --->   Azure Translator  --->  Azure OpenAI (GPT-4o)
+                                • Tradução inicial     • Pós-edição 
+                                • Glossário aplicado   • Terminologia precisa 
                        
-                                                        ▼
-                                              Tradução Técnica Final
+                                                                 ▼
+                                                       Tradução Técnica Final
 
 
 🚀 Funcionalidades Principais
